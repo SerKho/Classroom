@@ -22,8 +22,8 @@ public class Demo {
 
         classroom.leave(s1);
         classroom.printStudentsInfo();
-        classroom.isPresent(s2);
-        classroom.isPresent(new Student("Ivan", "Petrov"));
+        System.out.println(classroom.isPresent(s2));
+        System.out.println(classroom.isPresent(new Student("Ivan", "Petrov")));
         System.out.println("Quontity of students in th classroom - " + classroom.getStudentCount() + ".");
     }
 }

@@ -36,21 +36,7 @@ public class Classroom {
     }
 
     public boolean isPresent(Student student) {
-        if (student.equals(null)) {
-            System.out.println("Enter notnull value.");
-            return false;
-        } else {
-            for (int i = 0; i < this.getStudentCount(); i++) {
-                if (student.getName().equals(this.getStudents().get(i).getName()) &&
-                        student.getSurname().equals(this.getStudents().get(i).getSurname())) {
-                    System.out.println(this.getStudents().get(i).getName() + " " +
-                            this.getStudents().get(i).getSurname()+" is present.");
-                    return true;
-                }
-            }
-            System.out.println(student.getName() + " " + student.getSurname()+" is absent.");
-            return false;
-        }
+         return this.getStudents().contains(student);
     }
 
     public void printStudentsInfo(){
